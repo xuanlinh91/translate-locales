@@ -320,5 +320,8 @@
     "Freestyle writing style": "フリースタイルの文章スタイル",
     "Translate results to freestyle writing style": "フリースタイルの文章スタイルに翻訳結果を表示",
     "AI Model": "AI モデル",
-    "Mark all as read": "すべて既読にする"
+    "Mark all as read": "すべて既読にする",
+    "Upload progress": "アップロードの進行状況",
+    "File upload completed! Starting to translate...": "ファイルのアップロードが完了しました。翻訳を開始します...",
+    "File translation stated!": "ファイルの翻訳が開始されました！"
 }
