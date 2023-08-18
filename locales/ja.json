@@ -323,5 +323,8 @@
     "Mark all as read": "すべて既読にする",
     "Upload progress": "アップロードの進行状況",
     "File upload completed! Starting to translate...": "ファイルのアップロードが完了しました。翻訳を開始します...",
-    "File translation stated!": "ファイルの翻訳が開始されました！"
+    "File translation stated!": "ファイルの翻訳が開始されました！",
+    "Email is not exist.": "メールアドレスが存在しません。",
+    "Too Many Requests": "リクエストが多すぎます",
+    "System error.": "システムエラー。"
 }
