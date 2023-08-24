@@ -348,5 +348,7 @@
     "Token has been expired.": "Token has been expired.",
     "Correct grammar": "Correct grammar",
     "Summarize the translation result within 1000 words": "Summarize the translation result within 1000 words",
-    "Translate and correct grammar": "Translate and correct grammar"
+    "Translate and correct grammar": "Translate and correct grammar",
+    "SIGNIN_WRONG_EMAIL_PASSWORD": "Password is incorrect",
+    "The value must be equal to the other value": "The value must be equal to the other value"
 }

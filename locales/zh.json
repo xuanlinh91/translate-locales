@@ -348,5 +348,7 @@
     "Token has been expired.": "令牌已过期。",
     "Correct grammar": "纠正语法",
     "Summarize the translation result within 1000 words": "将翻译结果总结为 1000 个单词以内",
-    "Translate and correct grammar": "翻译并纠正语法"
+    "Translate and correct grammar": "翻译并纠正语法",
+    "SIGNIN_WRONG_EMAIL_PASSWORD": "密码正确",
+    "The value must be equal to the other value": "值必须等于其他值"
 }

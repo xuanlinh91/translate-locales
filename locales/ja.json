@@ -348,5 +348,7 @@
     "Token has been expired.": "トークンの有効期限が切れています。",
     "Correct grammar": "文法を修正",
     "Summarize the translation result within 1000 words": "1000 単語以内で翻訳結果を要約する",
-    "Translate and correct grammar": "翻訳して文法を修正する"
+    "Translate and correct grammar": "翻訳して文法を修正する",
+    "SIGNIN_WRONG_EMAIL_PASSWORD": "パスワードが正しくありません",
+    "The value must be equal to the other value": "値は他の値と等しくなければなりません"
 }
