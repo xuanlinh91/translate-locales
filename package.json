@@ -1,0 +1,25 @@
+{
+  "name": "translate-locales",
+  "version": "1.0.0",
+  "description": "Translate locales using openai api",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "node copy-template.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/xuanlinh91/translate-locales.git"
+  },
+  "author": "Nguyen Xuan Linh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xuanlinh91/translate-locales/issues"
+  },
+  "homepage": "https://github.com/xuanlinh91/translate-locales#readme",
+  "dependencies": {
+    "openai": "^4.2.0"
+  },
+  "bin": {
+    "translate-locales": "./bin/translate.js"
+  }
+}
