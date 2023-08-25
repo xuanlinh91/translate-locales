@@ -1,11 +1,10 @@
 {
-  "name": "translate-locale",
+  "name": "translate-locales",
   "version": "1.0.0",
   "description": "Translate locales using openai api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "translate": "node index.js"
+    "postinstall": "node copy-template.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +18,8 @@
   "homepage": "https://github.com/xuanlinh91/translate-locales#readme",
   "dependencies": {
     "openai": "^4.2.0"
+  },
+  "bin": {
+    "translate-locales": "./bin/translate.js"
   }
 }
