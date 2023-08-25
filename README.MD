@@ -28,12 +28,16 @@ Add this to your package.json
 
 2. **Create Configuration File**
 
-   After installing the package, create a `translate-locale.config.json` file in your project root folder. This configuration file should contain the following information:
+   After installing the package, a `translate-locale.config.json` file will be generated in your project root folder. This configuration file should contain the following information:
 
-   ```json
-   {
-       "openaiApiKey": "YOUR_OPENAI_API_KEY",
-       "locales": ["en", "fr", "es"]
+   ```javascript
+   module.exports = {
+    languages: [{ code: 'ja', name: 'japanese' }],
+    localePath: "./locales",
+    openAiKey: "YOUR_OPENAI_API_KEY",
+    localeKeyFile: "./localeKey.json",
+    delayTime: 1000,
+    aiModel: "gpt-3.5-turbo",
    }
    ```
    
