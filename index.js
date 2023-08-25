@@ -10,7 +10,7 @@ const languages = [{ code: 'ja', name: 'japanese' }] // List of language codes
 // }] // List of language codes
 
 const localePath = '../locales'
-const openAiKey = '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'
+const openAiKey = ''
 const keyFile = './input.json' // Path to input JSON file
 const delayTime = 10000
 const aiModel = 'gpt-3.5-turbo'
