@@ -1,21 +1,22 @@
 const fs = require('fs')
 const OpenAI = require('openai')
+const path = require('path');
 
 
-const languages = [{ code: 'en', name: 'english' }, { code: 'ja', name: 'japanese' }, {
-    code: 'zh',
-    name: 'chinese (simplified)'
-}] // List of language codes
+const languages = [{ code: 'ja', name: 'japanese' }] // List of language codes
+// const languages = [{ code: 'en', name: 'english' }, { code: 'ja', name: 'japanese' }, {
+//     code: 'zh',
+//     name: 'chinese (simplified)'
+// }] // List of language codes
 
-const localePath = '.'
+const localePath = '../locales'
 const openAiKey = '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'
-const keyFile = 'input.json' // Path to input JSON file
+const keyFile = './input.json' // Path to input JSON file
 const delayTime = 10000
 const aiModel = 'gpt-3.5-turbo'
 // TODO fix: why calling api when deleting key
 // TODO fix: Turn into npm library, adding command, config file
 // TODO Adding exception, document, rate limit, author
-// TODO Create locale path if not exist
 
 const openai = new OpenAI({
     apiKey: openAiKey
@@ -34,10 +35,21 @@ async function translateText(input, targetLang) {
     return completion.choices[0].message.content
 }
 
+// Function to create a directory recursively if it doesn't exist
+function createDirectoryIfNotExists(directoryPath) {
+    if (!fs.existsSync(directoryPath)) {
+        fs.mkdirSync(directoryPath, { recursive: true });
+        console.log(`Created directory: ${directoryPath}`);
+    } else {
+        console.log(`Directory already exists: ${directoryPath}`);
+    }
+}
+
 // Function to create or update language JSON files
 async function processLanguage(language) {
-    const languageFilePath = `${language.code}.json` // Path to language JSON file
-    const inputData = require(`./${keyFile}`)
+    createDirectoryIfNotExists(localePath)
+    const languageFilePath = `${localePath}/${language.code}.json` // Path to language JSON file
+    const inputData = require(`${keyFile}`)
     try {
         // Check if the language file exists
         if (fs.existsSync(languageFilePath)) {
