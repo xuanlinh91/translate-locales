@@ -7,9 +7,18 @@ Translate-Locales is a npm package that enables you to automatically translate k
 To install the Translate-Locales package, run the following command:
 
 ```bash
-npm install -g translate-locales
+npm install translate-locales
+or
+yarn add translate-locales
 ```
 
+Add this to your package.json
+
+```json
+"scripts": {
+  "translate-locales": "./node_modules/.bin/translate-locales"
+}
+```
 
 ## Usage
 
