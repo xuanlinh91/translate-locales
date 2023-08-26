@@ -88,7 +88,7 @@ class TranslateLocale {
                 languageData[key] = await this.updateLanguageData(languageData[key], inputData[key], language)
             } else {
                 if (!languageData.hasOwnProperty(key) || languageData[key] === "") {
-                    languageData[key] = await this.translateText(key, language) // Fill with translation value
+                    languageData[key] = await this.translateText(inputData[key], language) // Fill with translation value
                 }
             }
         }
@@ -104,7 +104,7 @@ class TranslateLocale {
             if (typeof inputData[key] === 'object' && !Array.isArray(inputData[key])) {
                 newLanguageData[key] = await this.createNewLanguageData(inputData[key], language)
             } else {
-                newLanguageData[key] = await this.translateText(key, language) // Fill with translation value
+                newLanguageData[key] = await this.translateText(inputData[key], language) // Fill with translation value
             }
         }
 
