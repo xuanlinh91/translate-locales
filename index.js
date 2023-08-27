@@ -105,8 +105,6 @@ class TranslateLocale {
             if (typeof inputData[key] === 'object' && !Array.isArray(inputData[key])) {
                 newLanguageData[key] = await this.createNewLanguageData(inputData[key], language)
             } else {
-                console.log(key)
-                console.log(inputData[key])
                 newLanguageData[key] = await this.translateText(inputData[key], language) // Fill with translation value
             }
         }
