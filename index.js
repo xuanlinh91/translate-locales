@@ -1,6 +1,8 @@
 const fs = require('fs')
 const OpenAI = require('openai')
 
+require('dotenv').config()
+
 class TranslateLocale {
     constructor(config) {
         this.languages = config.languages;
@@ -9,9 +11,8 @@ class TranslateLocale {
         this.delayTime = config.delayTime;
         this.aiModel = config.aiModel;
         this.openai = new OpenAI({
-            apiKey: config.openAiKey
+            apiKey: process.env.OPENAI_API_KEY
         })
-
     }
 
     sleep(ms) {
@@ -104,6 +105,8 @@ class TranslateLocale {
             if (typeof inputData[key] === 'object' && !Array.isArray(inputData[key])) {
                 newLanguageData[key] = await this.createNewLanguageData(inputData[key], language)
             } else {
+                console.log(key)
+                console.log(inputData[key])
                 newLanguageData[key] = await this.translateText(inputData[key], language) // Fill with translation value
             }
         }

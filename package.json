@@ -1,6 +1,6 @@
 {
   "name": "translate-locales",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Translate locales using openai api",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/xuanlinh91/translate-locales#readme",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "openai": "^4.2.0"
   },
   "bin": {
