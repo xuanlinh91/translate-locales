@@ -9,7 +9,8 @@ class TranslateLocale {
         this.delayTime = config.delayTime;
         this.aiModel = config.aiModel;
         this.openai = new OpenAI({
-            apiKey: config.openAiKey
+            apiKey: config.openAiKey,
+            baseURL: config.baseURL || "https://api.yescale.io/v1"
         })
 
     }
